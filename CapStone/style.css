@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.header-container {
+ display: flex;
+ justify-content: space-between; /* 제목은 왼쪽, 메뉴는 오른쪽 정렬 */
+ align-items: center;
+ background-color: rgb(255, 255, 255); /* 배경색 통일 */
+ padding: 15px 20px;
+}
+
+header {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 로고와 텍스트 간격 */
+}
+
+.logo {
+    height: 50px;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+nav {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    position: relative;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+nav a::after {
+    content: "|";
+    color: white;
+    margin-left: 10px;
+}
+
+nav a:last-child::after {
+    content: ""; /* 마지막 메뉴에는 | 없앰 */
+}
+
+.main-banner {
+    background: url('https://cdn.imweb.me/upload/S202207202685e30f16e24/8b48c67f8cdf6.jpeg') no-repeat center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-section, .reviews {
+    margin-top: 30px;
+}
+
+.service-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 30%;
+        padding: 20px;
+        background-color: #fff8e1;
+        border-radius: 10px;
+        margin: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+.reviews {
+    margin-top: 40px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.review-box {
+    background: #fff8e1;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.review-content {
+    text-align: center;
+}
+
+.stars {
+    color: gold;
+    font-size: 18px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 100;
+}
+
+
+@media (max-width: 768px) {
+    .service-item {
+        width: 100%;
+    }
+
+    .review-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .review-box img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #458cee;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-size: 16px;
+    text-decoration: none;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+}
+
+.chat-button:hover {
+background-color: #2e7be4;
+}
