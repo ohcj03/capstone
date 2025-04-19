@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>고객 후기</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff;
+      margin: 0;
+    }
+
+    .floating-text {
+        font-size: 22px;
+        display: inline-block;
+        margin-top: 70px;
+        margin-left: 20%;
+        padding: 5px;
+    }
+
+    .testimonial {
+      max-width: 900px;
+      margin-top: 60px;
+      margin-left: 20%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
+      cursor: default;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .profile-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+  }
+
+    .profile-image {
+      width: 30%;
+      height: 30%;
+      border-radius: 3%;
+      object-fit: cover;
+      flex-shrink: 0;
+  }
+    
+    .testimonial-content {
+      flex-grow: 1;
+    }
+
+    .user-info {
+      font-weight: bold;
+      margin-bottom: 6px;
+      font-size: 17px;
+    }
+
+    .stars {
+      color: #ffaa00;
+      font-size: 14px;
+    }
+
+    .date {
+      font-size: 13px;
+      color: #000000;
+      margin-left: 8px;
+    }
+
+    .testimonial-text {
+      font-size: 15.2px;
+      color: #333;
+      line-height: 1.6;
+      margin-top: 8px;
+      margin-bottom: 5%;
+    }
+
+    .badge {
+      background-color: #eee;
+      color: #555;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 10px;
+      margin-left: 8px;
+    }
+
+    .feedback-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 8px;
+      padding-bottom: 30px;
+    }
+
+    .feedback-title {
+      font-size: 16px; /* 글자 크기 작게 */
+      text-align: center; /* 가운데 정렬 */
+      margin-top: 40px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+
+    .feedback-button {
+      margin-top: 25px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #f5f5f5;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .feedback-button:hover {
+      background-color: #eeeded;
+    }
+
+    .back-button {
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: bold; /* 👉 글씨 굵게! */
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.2s ease;
+      margin-top: 2%;
+    }
+
+
+    .back-button:hover {
+      background-color: #dadada; 
+    }
+
+
+    .wrapper {
+      min-height: calc(100vh - 80px); /* 푸터 높이에 따라 조절 */
+    }
+
+    .footer {
+       background-color: #333;
+       color: white;
+       padding: 20px;
+       margin-top: 30px;
+       text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div style="margin-left: 20%; margin-top: 30px;">
+    <button onclick="location.href='review.html'" class="back-button">← 뒤로가기</button>
+  </div>
+  
+  
+    <h1><span class="floating-text">경기 수원시 (뭉치) 님의 후기</span></h1>
+
+  <div class="testimonial">
+
+    <div class="testimonial-card" onclick="openReview('꼬맹이')">
+      <img src="image/image 4.jpeg" alt="꼬맹이" class="profile-img">
+      <div class="testimonial-content">
+        <div class="user-info"> 경기 수원시 (뭉치) 
+          <span class="stars">★★★★★</span>
+          <span class="date">48분 전</span>
+          <span class="badge">16회 이용</span>
+        </div>
+        <div class="testimonial-text">처음엔 반신반의하며 예약했는데, 막상 이용해보니 너무 만족스러웠어요.
+            강아지가 낯을 많이 가리는데도 직원분들이 워낙 친절하게 대해주셔서 금세 적응하더라고요.
+            시설도 깨끗하고 세심하게 신경 써주셔서 안심하고 맡길 수 있었어요. 
+            예쁘게 봐주시고 정성껏 기록해주신 덕분에 하루가 너무 든든했어요. 믿고 맡길 수 있는 분을 만나 정말 다행이라고 생각해요 :)
+        </div>
+        <img src="image 4.jpeg" alt="뭉치" class="profile-image">
+      </div>
+    </div>
+</div>
+    <h2 class="feedback-title">이 후기, 도움이 되었나요?</h2>
+    <div class="feedback-buttons">
+      <button id="likeBtn" class="feedback-button">👍 도움돼요! (<span id="likeCount">0</span>)</button>
+      <button id="dislikeBtn" class="feedback-button">😢 도움되지 않아요 (<span id="dislikeCount">0</span>)</button>
+      
+    </div>
+    
+  
+    <script>
+      const API_URL = 'http://localhost:3000/feedback';
+  
+      function updateCount() {
+        fetch(API_URL)
+          .then(res => res.json())
+          .then(data => {
+            document.getElementById('likeCount').textContent = data.like;
+            document.getElementById('dislikeCount').textContent = data.dislike;
+          });
+      }
+  
+      document.getElementById('likeBtn').addEventListener('click', () => {
+        fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ type: 'like' })
+        }).then(updateCount);
+      });
+  
+      document.getElementById('dislikeBtn').addEventListener('click', () => {
+        fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ type: 'dislike' })
+        }).then(updateCount);
+      });
+  
+      updateCount(); // 페이지 처음 열릴 때 숫자 가져오기
+    </script>
+  
+<footer class="footer">
+    <p>문의: 010-1234-5678 | 이메일: petcare@example.com</p>
+    <p>© 2025 펫 케어 서비스</p>
+  </footer>
+  
+
+</body>
+</html>

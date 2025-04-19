@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>펫 케어 서비스</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-transparent">
+        <a href="main.html" class="logo-link">
+            <span class="site-title">케어 펫</span>
+        </a>
+        
+        <nav>
+            <a href="services.html">서비스</a>
+            <a href="review.html">고객 후기</a>
+            <a href="reservation.html">예약하기</a>
+            <a href="partner.html">파트너 지원</a>
+        </nav>
+    </header>
+
+    <div class="reservation-section" id="reservation">
+        <h2>예약하기</h2>
+        <form class="reservation-form">
+            <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">전화번호</label>
+                <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" required>
+            </div>
+            <div class="form-group">
+                <label for="petName">반려동물 이름</label>
+                <input type="text" id="petName" name="petName" placeholder="반려동물 이름" required>
+            </div>
+            <div class="form-group">
+                <label for="warning">반려동물 주의사항</label>
+                <input type="warning" id="warning" name="warning" placeholder="반려동물을 맡을 때 주의사항을 말씀해주세요" required>
+            </div>
+            <div class="form-group">
+                <label for="service">서비스 선택</label>
+                <select id="service" name="service" required>
+                    <option value="">-- 선택하세요 --</option>
+                    <option value="bath">목욕 & 미용</option>
+                    <option value="hotel">호텔 & 데이케어</option>
+                    <option value="health">건강 체크</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">희망 날짜</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <button type="submit">예약하기</button>
+        </form>
+    </div>
+    
+
+
+    <div class="footer">
+        <p>문의: 010-1234-5678 | 이메일: petcare@example.com</p>
+        <p>© 2025 펫 케어 서비스</p>
+        
+    </div>
+
+        
+    <a href="https://pf.kakao.com/_ASAwn/chat" target="_blank" class="chat-button">
+    💬 상담하기
+</a>
+</body>
+</html>
