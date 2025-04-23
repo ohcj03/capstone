@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>고객 후기</title>
+</head>
+<body>
+  <h2>이 후기, 도움이 되었나요?</h2>
+  <button id="likeBtn">😊 도움돼요!</button>
+  <button id="dislikeBtn">😢 도움되지 않아요</button>
+  <div>
+    👍 <span id="likeCount">0</span>
+    /
+    👎 <span id="dislikeCount">0</span>
+  </div>
+
+  <script>
+    const API_URL = 'http://localhost:3000/feedback';
+
+    function updateCount() {
+      fetch(API_URL)
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('likeCount').textContent = data.like;
+          document.getElementById('dislikeCount').textContent = data.dislike;
+        });
+    }
+
+    document.getElementById('likeBtn').addEventListener('click', () => {
+      fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'like' })
+      }).then(updateCount);
+    });
+
+    document.getElementById('dislikeBtn').addEventListener('click', () => {
+      fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'dislike' })
+      }).then(updateCount);
+    });
+
+    updateCount(); // 페이지 처음 열릴 때 숫자 가져오기
+  </script>
+</body>
+</html>
