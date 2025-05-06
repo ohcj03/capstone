@@ -3,6 +3,12 @@
 CarePet 반려동물 케어 사이트
 
 spring framework 사용
+ㄴ개어려움 바꿔야 될 듯
+
+
+
+
+node.js로 틀까 고민 중
 
 
 데이터베이스
